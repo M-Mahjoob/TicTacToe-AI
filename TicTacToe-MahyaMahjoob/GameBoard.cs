@@ -18,5 +18,20 @@ namespace TicTacToe_MahyaMahjoob
         public abstract Player this[int x, int y] { get; set; }
         public abstract bool IsFull { get; }
         public abstract int Size { get; }
+        public abstract List<Space> OpenSquares { get; }
+        public abstract GameBoard Clone();
+    }
+    public struct Space
+    {
+        public int X;
+        public int Y;
+        public double Rank;
+
+        public Space(int x, int y)
+        {
+            this.X = x;
+            this.Y = y;
+            Rank = 0;
+        }
     }
 }
